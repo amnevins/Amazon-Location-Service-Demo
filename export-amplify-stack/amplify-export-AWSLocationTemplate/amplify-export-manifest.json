@@ -1,0 +1,61 @@
+{
+  "stackName": "amplify-awslocationtemplate-dev-0604b",
+  "props": {
+    "templateFile": "root-stack-template.json",
+    "parameters": {
+      "AuthRoleName": "amplify-awslocationtemplate-dev-0604b-authRole",
+      "UnauthRoleName": "amplify-awslocationtemplate-dev-0604b-unauthRole",
+      "DeploymentBucketName": "amplify-awslocationtemplate-dev-0604b-deployment"
+    },
+    "preserveLogicalIds": true,
+    "loadNestedStacks": {
+      "authawslocationtemplate808dd50a": {
+        "templateFile": "auth/awslocationtemplate808dd50a/awslocationtemplate808dd50a-cloudformation-template.yml",
+        "parameters": {
+          "identityPoolName": "awslocationtemplate808dd50a_identitypool_808dd50a",
+          "allowUnauthenticatedIdentities": false,
+          "resourceNameTruncated": "awsloc808dd50a",
+          "userPoolName": "awslocationtemplate808dd50a_userpool_808dd50a",
+          "autoVerifiedAttributes": [
+            "email"
+          ],
+          "mfaConfiguration": "OFF",
+          "mfaTypes": [
+            "SMS Text Message"
+          ],
+          "smsAuthenticationMessage": "Your authentication code is {####}",
+          "smsVerificationMessage": "Your verification code is {####}",
+          "emailVerificationSubject": "Your verification code",
+          "emailVerificationMessage": "Your verification code is {####}",
+          "defaultPasswordPolicy": false,
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [],
+          "requiredAttributes": [
+            "email"
+          ],
+          "userpoolClientGenerateSecret": false,
+          "userpoolClientRefreshTokenValidity": 30,
+          "userpoolClientWriteAttributes": [
+            "email"
+          ],
+          "userpoolClientReadAttributes": [
+            "email"
+          ],
+          "userpoolClientLambdaRole": "awsloc808dd50a_userpoolclient_lambda_role",
+          "userpoolClientSetAttributes": false,
+          "sharedId": "808dd50a",
+          "resourceName": "awslocationtemplate808dd50a",
+          "authSelections": "identityPoolAndUserPool",
+          "useDefault": "default",
+          "userPoolGroupList": [],
+          "serviceName": "Cognito",
+          "usernameCaseSensitive": false,
+          "dependsOn": [],
+          "env": "dev"
+        },
+        "preserveLogicalIds": true,
+        "loadNestedStacks": {}
+      }
+    }
+  }
+}
